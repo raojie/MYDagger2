@@ -13,13 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.raoj.dagger.presenter;
+package com.raoj.dagger.presentation.presenter;
 
 import android.support.annotation.NonNull;
 
 import com.raoj.dagger.domain.User;
 import com.raoj.dagger.domain.exception.DefaultErrorBundle;
 import com.raoj.dagger.domain.exception.ErrorBundle;
+import com.raoj.dagger.domain.interactor.DefaultObserver;
 import com.raoj.dagger.domain.interactor.GetUserList;
 import com.raoj.dagger.presentation.exception.ErrorMessageFactory;
 import com.raoj.dagger.presentation.internal.di.PerActivity;
@@ -29,9 +30,8 @@ import com.raoj.dagger.presentation.view.UserListView;
 
 import java.util.Collection;
 import java.util.List;
-import javax.inject.Inject;
 
-import io.reactivex.observers.DefaultObserver;
+import javax.inject.Inject;
 
 /**
  * {@link Presenter} that controls communication between views and models of the presentation

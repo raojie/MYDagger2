@@ -2,7 +2,8 @@
  * Copyright (C) 2014 android10.org. All rights reserved.
  * @author Fernando Cejas (the android10 coder)
  */
-package com.raoj.dagger.view;
+package com.raoj.dagger.presentation.view;
+
 
 import com.raoj.dagger.presentation.model.UserModel;
 

@@ -2,7 +2,7 @@
  * Copyright (C) 2014 android10.org. All rights reserved.
  * @author Fernando Cejas (the android10 coder)
  */
-package com.raoj.dagger.view.fragment;
+package com.raoj.dagger.presentation.view.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -14,14 +14,18 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.raoj.dagger.R;
+import com.raoj.dagger.presentation.internal.di.components.UserComponent;
+import com.raoj.dagger.presentation.model.UserModel;
+import com.raoj.dagger.presentation.view.UserDetailsView;
+import com.raoj.dagger.presentation.view.component.AutoLoadImageView;
 import com.raoj.dagger.presenter.UserDetailsPresenter;
-import com.raoj.dagger.view.UserDetailsView;
-import com.raoj.dagger.view.component.AutoLoadImageView;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import javax.inject.Inject;
+import dagger.internal.Preconditions;
 
 /**
  * Fragment that shows details of a certain user.
@@ -32,7 +36,8 @@ public class UserDetailsFragment extends BaseFragment implements UserDetailsView
     @Inject
     UserDetailsPresenter userDetailsPresenter;
 
-    @BindView(R.id.iv_cover) AutoLoadImageView iv_cover;
+    @BindView(R.id.iv_cover)
+    AutoLoadImageView iv_cover;
     @BindView(R.id.tv_fullname) TextView tv_fullname;
     @BindView(R.id.tv_email) TextView tv_email;
     @BindView(R.id.tv_followers) TextView tv_followers;
@@ -85,7 +90,6 @@ public class UserDetailsFragment extends BaseFragment implements UserDetailsView
 
     @Override public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 
     @Override public void onDestroy() {
