@@ -16,6 +16,7 @@
 package com.raoj.dagger.presentation.internal.di.modules;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.raoj.dagger.data.cache.UserCache;
 import com.raoj.dagger.data.cache.UserCacheImpl;
@@ -38,8 +39,9 @@ import dagger.Provides;
 @Module
 public class ApplicationModule {
     private final AndroidApplication application;
-
+    private static final String TAG = "AndroidApplication";
     public ApplicationModule(AndroidApplication application) {
+        Log.d(TAG, "ApplicationModule");
         this.application = application;
     }
 

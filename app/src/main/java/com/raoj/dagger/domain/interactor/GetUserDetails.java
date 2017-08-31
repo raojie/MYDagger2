@@ -15,11 +15,12 @@
  */
 package com.raoj.dagger.domain.interactor;
 
-import com.fernandocejas.android10.sample.domain.User;
-import com.fernandocejas.android10.sample.domain.executor.PostExecutionThread;
-import com.fernandocejas.android10.sample.domain.executor.ThreadExecutor;
-import com.fernandocejas.android10.sample.domain.repository.UserRepository;
-import com.fernandocejas.arrow.checks.Preconditions;
+import com.raoj.dagger.domain.User;
+import com.raoj.dagger.domain.executor.PostExecutionThread;
+import com.raoj.dagger.domain.executor.ThreadExecutor;
+import com.raoj.dagger.domain.repository.UserRepository;
+
+import dagger.internal.Preconditions;
 import io.reactivex.Observable;
 import javax.inject.Inject;
 

@@ -21,6 +21,7 @@ import android.support.annotation.NonNull;
 import com.raoj.dagger.domain.User;
 import com.raoj.dagger.domain.exception.DefaultErrorBundle;
 import com.raoj.dagger.domain.exception.ErrorBundle;
+import com.raoj.dagger.domain.interactor.DefaultObserver;
 import com.raoj.dagger.domain.interactor.GetUserDetails;
 import com.raoj.dagger.presentation.exception.ErrorMessageFactory;
 import com.raoj.dagger.presentation.internal.di.PerActivity;
@@ -29,8 +30,6 @@ import com.raoj.dagger.presentation.model.UserModel;
 import com.raoj.dagger.presentation.view.UserDetailsView;
 
 import javax.inject.Inject;
-
-import io.reactivex.observers.DefaultObserver;
 
 /**
  * {@link Presenter} that controls communication between views and models of the presentation

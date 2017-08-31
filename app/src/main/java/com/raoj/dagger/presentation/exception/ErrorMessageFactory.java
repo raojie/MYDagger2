@@ -18,6 +18,8 @@ package com.raoj.dagger.presentation.exception;
 import android.content.Context;
 
 import com.raoj.dagger.R;
+import com.raoj.dagger.data.exception.NetworkConnectionException;
+import com.raoj.dagger.data.exception.UserNotFoundException;
 
 /**
  * Factory used to create error messages from an Exception as a condition.

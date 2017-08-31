@@ -10,12 +10,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 
-import com.fernandocejas.android10.sample.presentation.R;
-import com.fernandocejas.android10.sample.presentation.internal.di.HasComponent;
-import com.fernandocejas.android10.sample.presentation.internal.di.components.DaggerUserComponent;
-import com.fernandocejas.android10.sample.presentation.internal.di.components.UserComponent;
-import com.fernandocejas.android10.sample.presentation.model.UserModel;
-import com.fernandocejas.android10.sample.presentation.view.fragment.UserListFragment;
+import com.raoj.dagger.R;
+import com.raoj.dagger.presentation.internal.di.HasComponent;
+import com.raoj.dagger.presentation.internal.di.components.DaggerUserComponent;
+import com.raoj.dagger.presentation.internal.di.components.UserComponent;
+import com.raoj.dagger.presentation.model.UserModel;
+import com.raoj.dagger.presentation.view.fragment.UserListFragment;
 
 /**
  * Activity that shows a list of Users.

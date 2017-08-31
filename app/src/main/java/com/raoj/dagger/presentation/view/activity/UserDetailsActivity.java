@@ -12,6 +12,7 @@ import android.view.Window;
 
 import com.raoj.dagger.R;
 import com.raoj.dagger.presentation.internal.di.HasComponent;
+import com.raoj.dagger.presentation.internal.di.components.DaggerUserComponent;
 import com.raoj.dagger.presentation.internal.di.components.UserComponent;
 import com.raoj.dagger.presentation.view.fragment.UserDetailsFragment;
 

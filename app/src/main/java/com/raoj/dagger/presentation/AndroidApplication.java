@@ -16,9 +16,11 @@
 package com.raoj.dagger.presentation;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.raoj.dagger.BuildConfig;
 import com.raoj.dagger.presentation.internal.di.components.ApplicationComponent;
+import com.raoj.dagger.presentation.internal.di.components.DaggerApplicationComponent;
 import com.raoj.dagger.presentation.internal.di.modules.ApplicationModule;
 
 /**
@@ -26,25 +28,31 @@ import com.raoj.dagger.presentation.internal.di.modules.ApplicationModule;
  */
 public class AndroidApplication extends Application {
 
+    private static final String TAG = "AndroidApplication";
+
     private ApplicationComponent applicationComponent;
 
     @Override public void onCreate() {
         super.onCreate();
+        Log.d(TAG, "onCreate");
         this.initializeInjector();
         this.initializeLeakDetection();
     }
 
     private void initializeInjector() {
+        Log.d(TAG, "initializeInjector");
         this.applicationComponent = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();
     }
 
     public ApplicationComponent getApplicationComponent() {
+        Log.d(TAG, "AndroidApplication-getApplicationComponent");
         return this.applicationComponent;
     }
 
     private void initializeLeakDetection() {
+        Log.d(TAG, "initializeLeakDetection");
         if (BuildConfig.DEBUG) {
 //            LeakCanary.install(this);
         }

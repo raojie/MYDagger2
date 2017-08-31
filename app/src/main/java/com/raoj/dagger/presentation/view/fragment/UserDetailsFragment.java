@@ -16,9 +16,9 @@ import android.widget.TextView;
 import com.raoj.dagger.R;
 import com.raoj.dagger.presentation.internal.di.components.UserComponent;
 import com.raoj.dagger.presentation.model.UserModel;
+import com.raoj.dagger.presentation.presenter.UserDetailsPresenter;
 import com.raoj.dagger.presentation.view.UserDetailsView;
 import com.raoj.dagger.presentation.view.component.AutoLoadImageView;
-import com.raoj.dagger.presenter.UserDetailsPresenter;
 
 import javax.inject.Inject;
 
